@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a399d720897770083afeab47c94ad0577df76c2dfd8aeceaddfa5e2b51a5f5f7
-size 403
+# scrapes new headlines
+
+import requests
+from bs4 import BeautifulSoup
+
+def scrape_earnings_news(company: str):
+    url = f"https://www.google.com/search?q={company}+earnings+news"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    res = requests.get(url, headers=headers)
+    soup = BeautifulSoup(res.text, "html.parser")
+    headlines = [h.get_text() for h in soup.select("h3")]
+    return headlines[:5]
