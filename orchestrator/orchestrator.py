@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:04ff8f210e4be9ee50df774b11eb458ebcfb6f8f0a061bdf7b54cb72f411d3bc
-size 654
+# calls all agents in order
+
+from agents.voice_agent import speech_to_text, text_to_speech
+from data_ingestion.api_agent import get_stock_data
+from data_ingestion.scraping_agent import scrape_earnings_news
+from agents.analysis_agent import calculate_risk_exposure, detect_earning_surprises
+from agents.language_agent import generate_market_brief
+
+def process_query(audio_path):
+    question = speech_to_text(audio_path)
+    news = scrape_earnings_news("Asia tech stocks")
+    risk = calculate_risk_exposure()
+    earnings = detect_earning_surprises(news)
+    summary = generate_market_brief(risk, earnings)
+    text_to_speech(summary)
+    return summary
