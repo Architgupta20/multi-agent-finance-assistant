@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:6774597359d55a2107c992eaf79b37aaeb7c1f0e9a381ec237e9cc7785a78d82
-size 157
+fastapi
+uvicorn
+streamlit
+openai
+faiss-cpu
+yfinance
+beautifulsoup4
+requests
+whisper
+pyttsx3
+transformers
+langchain
+sentence-transformers
+pydub
+python-dotenv
