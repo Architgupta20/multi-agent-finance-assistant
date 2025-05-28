@@ -1,6 +1,6 @@
 # calls all agents in order
 
-from agents.voice_agent import speech_to_text, text_to_speech
+#from agents.voice_agent import speech_to_text, text_to_speech
 from data_ingestion.api_agent import get_stock_data
 from data_ingestion.scraping_agent import scrape_earnings_news
 from agents.analysis_agent import calculate_risk_exposure, detect_earning_surprises
