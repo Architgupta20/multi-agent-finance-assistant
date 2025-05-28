@@ -6,10 +6,10 @@ faiss-cpu
 yfinance
 beautifulsoup4
 requests
-whisper
 pyttsx3
 transformers
 langchain
 sentence-transformers
 pydub
 python-dotenv
+git+https://github.com/openai/whisper.git
