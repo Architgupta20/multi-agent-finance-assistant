@@ -11,5 +11,5 @@ if audio_file:
     st.audio(audio_file)
     if st.button("Ask"):
         files = {"audio": audio_file}
-       response = requests.post("https://finance-api-k065.onrender.com/ask", files=files)
+        response = requests.post("https://finance-api-k065.onrender.com/ask", files=files, timeout=60)
         st.success("Response: " + response.json()["response"])
