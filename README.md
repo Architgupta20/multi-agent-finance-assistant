@@ -10,30 +10,29 @@ A voice-powered multi-agent assistant that summarizes financial risk and earning
 - Streamlit frontend for interactive voice query interface  
 - LLM integration using Hugging Face Inference API (free-tier models)
 
-## 🗂️ Project Structure
+## 📁 Repository Structure
 
-finance-assistant/  
-├── agents/  
-│   ├── api_agent.py  
-│   ├── analysis_agent.py  
-│   ├── language_agent.py  
-│   ├── retriever_agent.py  
-│   ├── scraper_agent.py  
-│   ├── voice_agent.py  
-│   └── test.py  
-├── data_ingestion/  
-│   ├── earnings.py  
-│   └── macro.py  
-├── orchestrator/  
-│   ├── orchestrator.py  
-│   └── main.py  
-├── streamlit_app/  
-│   └── app.py  
-├── input.wav  
-├── requirements.txt  
-├── Dockerfile  
-├── .env  
-└── README.md  
+multi-agent-finance-assistant/
+├── agents/                  # All agent scripts: voice, language, retriever
+│   ├── api_agent.py
+│   ├── analysis_agent.py
+│   ├── language_agent.py
+│   └── ...
+├── data_ingestion/         # Data collection scripts (macro & earnings)
+│   ├── macro.py
+│   └── earnings.py
+├── orchestrator/           # Agent coordinator + FastAPI app
+│   ├── orchestrator.py
+│   └── main.py
+├── streamlit_app/          # Streamlit UI code
+│   └── app.py
+├── docs/                   # AI tool logs and documentation
+│   └── ai_tool_usage.md
+├── input.wav               # Sample input file
+├── .env.example            # Environment variable template
+├── requirements.txt        # Python dependencies
+├── Dockerfile              # Optional container config
+└── README.md               # Project overview and instructions
 
 ## 🚀 How to Run Locally
 
