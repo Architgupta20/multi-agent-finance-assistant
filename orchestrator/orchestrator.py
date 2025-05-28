@@ -6,8 +6,8 @@ from data_ingestion.scraping_agent import scrape_earnings_news
 from agents.analysis_agent import calculate_risk_exposure, detect_earning_surprises
 from agents.language_agent import generate_market_brief
 
-def process_query(audio_path):
-    question = speech_to_text(audio_path)
+def process_query(audio_file):
+    return "Test response: Earnings report summary would appear here."
     news = scrape_earnings_news("Asia tech stocks")
     risk = calculate_risk_exposure()
     earnings = detect_earning_surprises(news)
