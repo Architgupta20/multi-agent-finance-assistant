@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:3c74f60a5ef7e1fab3a8fb9481003b8918e4d797ceb825d44f223c1dc56b777a
-size 276
+# handles speech-to-text and text-to-speech
+
+import whisper
+import subprocess
+
+model = whisper.load_model("base")
+
+def speech_to_text(audio_path):
+    result = model.transcribe(audio_path)
+    return result["text"]
+
+def text_to_speech(text):
+    subprocess.run(["say", text])
