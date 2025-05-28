@@ -12,4 +12,5 @@ langchain
 sentence-transformers
 pydub
 python-dotenv
+python-multipart
 git+https://github.com/openai/whisper.git
